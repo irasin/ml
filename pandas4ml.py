@@ -83,8 +83,8 @@ print(res)
 Df4 = pd.DataFrame(np.ones((3, 4))*0, columns=['a', 'b', 'c', 'd'], index=[1, 2, 3])
 Df5 = pd.DataFrame(np.ones((3, 4))*1, columns=['b', 'c', 'd', 'e'], index=[2, 3, 4])
 print(Df4, Df5, sep='\n')
-res1 =pd.concat([Df4, Df5], join='outer')
-res2 =pd.concat([Df4, Df5], join='inner')
+res1 = pd.concat([Df4, Df5], join='outer')
+res2 = pd.concat([Df4, Df5], join='inner')
 print(res1, res2, sep='\n')
 
 # join_axes
@@ -104,8 +104,8 @@ left = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
                      'B': ['B0', 'B1', 'B2', 'B3']})
 right = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
                       'C': ['C0', 'C1', 'C2', 'C3'],
-                      'D': ['D0', 'D1', 'D2', 'D3']} )
-res6 =pd.merge(left, right, on='key')
+                      'D': ['D0', 'D1', 'D2', 'D3']})
+res6 = pd.merge(left, right, on='key')
 print('res6: ', res6, sep='\n')
 
 # consider two keys
@@ -143,8 +143,8 @@ print('res13: ', res13, sep='\n')
 # handle overlapping
 boys = pd.DataFrame({'k': ['K0', 'K1', 'K2'], 'age': [1, 2, 3]})
 girls = pd.DataFrame({'k': ['K0', 'K0', 'K3'], 'age': [4, 5, 6]})
-res14 = pd.merge(boys, girls,on='k', how='outer',suffixes=['_boy', '_girl'])
-print(pd.merge(boys, girls,on='k', how='outer'))
+res14 = pd.merge(boys, girls, on='k', how='outer', suffixes=['_boy', '_girl'])
+print(pd.merge(boys, girls, on='k', how='outer'))
 print('res14: ', res14, sep='\n')
 print(pd.merge(Df4, Df5, how='outer', left_index=True, right_index=True, suffixes=['_left', '_righr']))
 
@@ -161,5 +161,5 @@ data.plot()
 # plot methods:
 # bar, hist, box, kde, area, scatter, hexbin, pie
 ax = data.plot.scatter(x='a', y='b', color='DarkBlue', label='Class 1')
-data.plot.scatter(x='a', y='c', color='DarkGreen', label='Class 2', ax = ax)
+data.plot.scatter(x='a', y='c', color='DarkGreen', label='Class 2', ax=ax)
 plt.show()
