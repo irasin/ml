@@ -53,5 +53,4 @@ ax10 = plt.subplot(gs[2, 1])
 # method 3: easy to define structure
 f, ((ax11, ax12), (ax21, ax22)) = plt.subplots(2, 2, sharex='row', sharey='all')
 ax11.scatter([1, 1], [2, 2])
-
 plt.show()
